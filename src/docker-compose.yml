@@ -8,10 +8,10 @@ services:
     # Uncomment if you're running docker as root
     # privileged: true
     restart: always
-    environment:
-      - VIRTUAL_HOST=soulseek.jspijkervet.com
-      - VIRTUAL_PORT=6081
-      - LETSENCRYPT_HOST=soulseek.jspijkervet.com
+    # environment:
+            # - VIRTUAL_HOST=soulseek.jspijkervet.com
+            # - VIRTUAL_PORT=6080
+        # - LETSENCRYPT_HOST=soulseek.jspijkervet.com
 
     ports:
       - 2234:2234
@@ -37,14 +37,14 @@ services:
 
       # Bring in the system's current time so we don't need to manually set the time
       # NB: Uncomment on Windows/Mac!
-      # - /etc/localtime:/etc/localtime:ro
+      - /etc/localtime:/etc/localtime:ro
 
       ## Add in any local shares that you wish to map (such as sharing files etc) here
       ## Suggest including :ro tag so that these are only Read Only (Museekd is 5+ years old without updates, who knows what could happen)
       
-      - /Users/spijkervet/Music:/music:ro
+      - /media/media-001/music:/music:ro
       #- /fuse/Film:/movies_tv:ro
 
       # This is the Museek downloaded & incomplete directories, change them as you wish - By default soulseek is configured to save in /downloaded and /incomplete within the docker container.
-      - ./shares/downloaded:/downloaded
-      - ./shares/incomplete:/incomplete
+      - /media/media-001/shares/downloaded:/downloaded
+      - /media/media-001/shares/incomplete:/incomplete

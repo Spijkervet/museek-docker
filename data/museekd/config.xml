@@ -37,7 +37,7 @@
     <key id="host">server.slsknet.org</key>
     <key id="password">941995</key>
     <key id="port">2242</key>
-    <key id="username">janewilde</key>
+    <key id="username">janewilde2</key>
   </domain>
   <domain id="shares">
     <key id="database">/root/.museekd/config.shares</key>
