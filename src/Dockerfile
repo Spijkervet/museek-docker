@@ -29,9 +29,9 @@ RUN git clone https://github.com/eLvErDe/museek-plus.git /museek-plus && \
     mkdir -p /root/.museekd/logs/ && \
     ln -s /museek-plus/python-clients/museekcontrol /root/.museekd/museekcontrol
 
-COPY museekd_config.xml.default /root/.museekd/config.xml
-COPY museekcontrol.config.default /root/.museekd/museekcontrol.config
-COPY museeq.conf.default /root/.config/MuseekPlus.org/museeq.conf
+# COPY museekd_config.xml.default /root/.museekd/config.xml
+# COPY museekcontrol.config.default /root/.museekd/museekcontrol.config
+# COPY museeq.conf.default /root/.config/MuseekPlus.org/museeq.conf
 
 ## Build Newsoul server - Uncomment and built at your own risk, seems to be somewhat stable on older ubuntu builds but not trusty. NB This is only the museekd daemon, the museek+ front-end and pythons scripts still need to stay...
 #

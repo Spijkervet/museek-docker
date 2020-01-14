@@ -8,6 +8,10 @@ services:
     # Uncomment if you're running docker as root
     # privileged: true
     restart: always
+    environment:
+      - VIRTUAL_HOST=soulseek.jspijkervet.com
+      - VIRTUAL_PORT=6081
+      - LETSENCRYPT_HOST=soulseek.jspijkervet.com
 
     ports:
       - 2234:2234
