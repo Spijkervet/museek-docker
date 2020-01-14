@@ -1,6 +1,0 @@
-[connection]
-interface = localhost:2240
-password = museek
-
-[museekcontrol]
-log_dir = ~/.museekd/logs/

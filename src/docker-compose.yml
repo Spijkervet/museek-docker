@@ -33,12 +33,12 @@ services:
 
       # Bring in the system's current time so we don't need to manually set the time
       # NB: Uncomment on Windows/Mac!
-      - /etc/localtime:/etc/localtime:ro
+      # - /etc/localtime:/etc/localtime:ro
 
       ## Add in any local shares that you wish to map (such as sharing files etc) here
       ## Suggest including :ro tag so that these are only Read Only (Museekd is 5+ years old without updates, who knows what could happen)
       
-      #- /fuse/Music:/music:ro
+      - /Users/spijkervet/Music:/music:ro
       #- /fuse/Film:/movies_tv:ro
 
       # This is the Museek downloaded & incomplete directories, change them as you wish - By default soulseek is configured to save in /downloaded and /incomplete within the docker container.

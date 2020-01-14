@@ -23,6 +23,8 @@ RUN curl -fL# https://github.com/novnc/noVNC/archive/v1.0.0.tar.gz -o /tmp/novnc
 ADD etc /etc
 ADD usr /usr
 
+ADD scripts /scripts
+
 RUN git clone https://github.com/eLvErDe/museek-plus.git /museek-plus && \
     mkdir -p /root/.museekd/logs/ && \
     ln -s /museek-plus/python-clients/museekcontrol /root/.museekd/museekcontrol
